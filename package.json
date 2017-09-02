@@ -1,0 +1,31 @@
+{
+  "name": "unity-rect-extensions",
+  "version": "0.0.1",
+  "description": "A set of utility functions for the Unity's Rect and RectTransform, provided as extension methods",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatthat/unity-rect-extensions.git"
+  },
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "larrykirschner@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beatthat/unity-rect-extensions/issues"
+  },
+  "homepage": "https://github.com/beatthat/unity-rect-extensions",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install"
+  },
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "unity-extensions": "github:beatthat/unity-extensions#semver:^0.0.3",
+    "unity-pools": "github:beatthat/unity-pools#semver:^0.0.5"
+  }
+}
