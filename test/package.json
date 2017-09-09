@@ -8,7 +8,7 @@
     "clean": "rm -rf node_modules package-lock.json yarn.lock Library Temp Assets"
   },
   "dependencies": {
-    "unity-rect-extensions": "../unity-rect-extensions-0.0.1.tgz"
+    "rect-utils": "../rect-utils-0.0.2.tgz"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",

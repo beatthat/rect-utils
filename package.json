@@ -1,11 +1,12 @@
 {
-  "name": "unity-rect-extensions",
-  "version": "0.0.1",
+  "name": "rect-utils",
+  "scope": "ape",
+  "version": "0.0.2",
   "description": "A set of utility functions for the Unity's Rect and RectTransform, provided as extension methods",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beatthat/unity-rect-extensions.git"
+    "url": "git+https://github.com/beatthat/rect-utils.git"
   },
   "files": [
     "index.js",
@@ -15,17 +16,19 @@
   "author": "larrykirschner@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/beatthat/unity-rect-extensions/issues"
+    "url": "https://github.com/beatthat/rect-utils/issues"
   },
-  "homepage": "https://github.com/beatthat/unity-rect-extensions",
+  "homepage": "https://github.com/beatthat/rect-utils",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
-    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install"
+    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
+    "clean": "rm -f *.tgz && cd test && npm run clean",
+    "sync:test2src": "rsync -rv --include '*/' --include '*.cs' --exclude '*' --prune-empty-dirs test/Assets/Plugins/${npm_package_scope}/${npm_package_name}/ ./src/${npm_package_name}/"
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "unity-extensions": "github:beatthat/unity-extensions#semver:^0.0.3",
-    "unity-pools": "github:beatthat/unity-pools#semver:^0.0.5"
+    "unity-extensions": "github:beatthat/unity-extensions#semver:^0.0.5",
+    "pools": "github:beatthat/pools#semver:^0.0.7"
   }
 }

@@ -14,6 +14,9 @@ namespace BeatThat
 
 	public static class RectExtensions 
 	{
+		/// <summary>
+		/// Linear interpolaton between 2 Rects
+		/// </summary>
 		public static Rect LerpTo(this Rect r, Rect r2, float pct)
 		{            
 			pct = Mathf.Clamp01(pct);
