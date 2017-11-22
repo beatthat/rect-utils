@@ -12,9 +12,6 @@ namespace BeatThat
 		None = 0, Left = 1, Top = 2, Right = 4, Bottom = 8
 	}
 
-	/// <summary>
-	/// Utils and extension functions for unity's Rect
-	/// </summary>
 	public static class RectExtensions 
 	{
 		/// <summary>
