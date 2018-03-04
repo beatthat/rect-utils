@@ -21,15 +21,24 @@
   "homepage": "https://github.com/beatthat/rect-utils",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
-    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install",
-    "clean": "rm -f *.tgz && cd test && npm run clean",
+    "install:test": "npm pack && cp ${npm_package_name}-${npm_package_version}.tgz ${npm_package_name}-latest.tgz && cd test && npm run clean && npm install",
+    "clean": "rm -f *.tgz package-lock.json && cd test && npm run clean",
     "sync:test2src": "rsync -rv --include '*/' --include '*.cs' --exclude '*' --prune-empty-dirs test/Assets/Plugins/${npm_package_scope}/${npm_package_name}/ ./src/${npm_package_name}/",
-    "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}"
+    "pub:tag": "git add -A && git commit -m ${npm_package_version} && git tag -a ${npm_package_version} -m ${npm_package_version} && git push origin master && git push origin ${npm_package_version}",
+    "preinstall:test": "rm -f *.tgz",
+    "template:update": "node scripts/template-update.js",
+    "cp:test2src": "cd test && node scripts/cp-test2src.js",
+    "overwrite:test2src": "cd test && node scripts/overwrite-test2src.js",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags && npm run clean"
   },
   "dependencies": {
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "pools": "github:beatthat/pools#semver:^0.0.7",
-    "transform-path-ext": "github:beatthat/transform-path-ext#semver:^0.0.1"
-  }
+    "pools": "github:beatthat/pools#semver:^1.0.0",
+    "transform-path-ext": "github:beatthat/transform-path-ext#semver:^1.0.0",
+    "path": "^0.12.7",
+    "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^1.0.0"
+  },
+  "devDependencies": {}
 }

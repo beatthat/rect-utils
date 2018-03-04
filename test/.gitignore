@@ -10,6 +10,7 @@ Temp
 *.swp
 *.log
 
+ProjectSettings
 Library
 .DS_Store
 
@@ -21,5 +22,4 @@ manifest.json.meta
 
 EditorTestResults.xml
 
-yarn.lock
 package-lock.json

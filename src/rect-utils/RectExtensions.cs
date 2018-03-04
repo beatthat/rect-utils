@@ -12,6 +12,9 @@ namespace BeatThat
 		None = 0, Left = 1, Top = 2, Right = 4, Bottom = 8
 	}
 
+	/// <summary>
+	/// Utils and extension functions for unity's Rect
+	/// </summary>
 	public static class RectExtensions 
 	{
 		/// <summary>
@@ -120,6 +123,7 @@ namespace BeatThat
 			return res;
 		}
 
+		[Obsolete("use GetAspect overload with out param")]
 		public static float GetAspect(this Rect r)
 		{
 			if(r.height <= 0) {
@@ -128,6 +132,17 @@ namespace BeatThat
 			}
 
 			return r.width/r.height;
+		}
+
+		public static bool GetAspect(this Rect r, out float aspect)
+		{
+			if(r.height <= 0) {
+				aspect = float.NaN;
+				return false;
+			}
+
+			aspect = r.width/r.height;
+			return true;
 		}
 
 		public static bool Intersects(this Rect r, Rect r2, out Rect intersection)

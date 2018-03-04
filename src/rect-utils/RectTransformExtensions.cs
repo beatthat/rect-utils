@@ -7,6 +7,11 @@ namespace BeatThat
 	public static class RectTransformExtensions 
 	{
 		#if UNITY_EDITOR
+		public static void DrawGizmoScreenRect(this RectTransform rt, Color color)
+		{
+			rt.DrawGizmoScreenRect (rt.GetScreenRect (), color);
+		}
+
 		public static void DrawGizmoScreenRect(this RectTransform rt, Rect screenRect, Color color)
 		{
 			var saveColor = Gizmos.color;
@@ -21,6 +26,11 @@ namespace BeatThat
 			Gizmos.DrawLine(new Vector3(r.xMax, r.yMin), (Vector3)r.min);
 
 			Gizmos.color = saveColor;
+		}
+
+		public static void DrawGizmoFillScreenRect(this RectTransform rt, Color color)
+		{
+			rt.DrawGizmoFillScreenRect (rt.GetScreenRect (), color);
 		}
 
 		public static void DrawGizmoFillScreenRect(this RectTransform rt, Rect screenRect, Color color)
