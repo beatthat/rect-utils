@@ -1,6 +1,6 @@
 {
   "name": "rect-utils",
-  "scope": "ape",
+  "scope": "beatthat",
   "version": "1.0.0",
   "description": "A set of utility functions for the Unity's Rect and RectTransform, provided as extension methods",
   "main": "index.js",
@@ -11,7 +11,8 @@
   "files": [
     "index.js",
     "scripts",
-    "src"
+    "src",
+    "Runtime"
   ],
   "author": "larrykirschner@gmail.com",
   "license": "MIT",
