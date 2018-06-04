@@ -10,7 +10,6 @@ Temp
 *.swp
 *.log
 
-ProjectSettings
 Library
 .DS_Store
 
@@ -23,3 +22,10 @@ manifest.json.meta
 EditorTestResults.xml
 
 package-lock.json
+
+unpm-local.json
+unpm-packages.json
+
+ProjectSettings/*
+!ProjectSettings/ProjectSettings.asset
+!ProjectSettings/ProjectVersion.txt

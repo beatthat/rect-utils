@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using BeatThat;
 using UnityEngine.Assertions;
 
