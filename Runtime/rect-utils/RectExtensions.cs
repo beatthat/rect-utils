@@ -1,10 +1,10 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace BeatThat
+namespace BeatThat.Rects
 {
-	public enum RectConstraintsAdjustment { NONE = 0, ADJUSTED_TO_MEET_CONSTRAINTS = 1, ADJUSTED_BUT_FAILED_TO_MEET_CONSTRAINTS = 2 }
+    public enum RectConstraintsAdjustment { NONE = 0, ADJUSTED_TO_MEET_CONSTRAINTS = 1, ADJUSTED_BUT_FAILED_TO_MEET_CONSTRAINTS = 2 }
 
 	[Flags]
 	public enum EdgeFlags
@@ -418,3 +418,5 @@ namespace BeatThat
 
 	}
 }
+
+

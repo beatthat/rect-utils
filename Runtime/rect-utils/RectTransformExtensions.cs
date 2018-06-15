@@ -1,10 +1,10 @@
+using BeatThat.Pools;
+using BeatThat.TransformPathExt;
 using UnityEngine;
-using BeatThat;
-using UnityEngine.Assertions;
 
-namespace BeatThat
+namespace BeatThat.Rects
 {
-	public static class RectTransformExtensions 
+    public static class RectTransformExtensions 
 	{
 		#if UNITY_EDITOR
 		public static void DrawGizmoScreenRect(this RectTransform rt, Color color)
@@ -407,3 +407,6 @@ namespace BeatThat
 
 	}
 }
+
+
+
