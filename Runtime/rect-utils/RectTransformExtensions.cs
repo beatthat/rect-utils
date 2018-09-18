@@ -176,14 +176,18 @@ namespace BeatThat.Rects
 				canvas = rt.GetComponentInParent<Canvas>();
 			}
 
+            //tgtScreenRect.width = Mathf.Max(tgtScreenRect.width, 0.0001f);
+            //tgtScreenRect.height = Mathf.Max(tgtScreenRect.height, 0.0001f);
 
 			var tgtValid = (tgtScreenRect.width > 0f && tgtScreenRect.height > 0f);
 
 //			Assert.IsTrue(tgtValid, "[" + rt.Path() + "] attempt to set rect to collapsed or inverted shape (not supported)");
 
 			if(!tgtValid) {
-				Debug.LogWarning("[" + rt.Path() + "] attempt to set rect to collapsed or inverted shape (not supported)");
-				return;
+#if UNITY_EDITOR || DEBUG_UNSTRIP
+                Debug.LogWarning("[" + rt.Path() + "] attempt to set rect to collapsed or inverted shape (not supported)");
+#endif
+                return;
 			}
 
 			var curScreenRect = rt.GetScreenRect(canvas);
