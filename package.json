@@ -1,7 +1,7 @@
 {
   "name": "rect-utils",
   "scope": "beatthat",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A set of utility functions for the Unity's Rect and RectTransform, provided as extension methods",
   "main": "index.js",
   "repository": {
