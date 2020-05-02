@@ -15,7 +15,7 @@ namespace BeatThat.Rects
 	/// <summary>
 	/// Utils and extension functions for unity's Rect
 	/// </summary>
-	public static class RectExtensions 
+	public static class RectUtils 
 	{
 		/// <summary>
 		/// Linear interpolaton between 2 Rects
